@@ -26,6 +26,7 @@
       }
       .header img {
         width: 115px;
+        height: 141px;
       }
       .invoice-info,
       .billing-info {
@@ -58,7 +59,7 @@
         /* grid-template-columns: auto auto; */
       }
       .bill-to {
-        background: #bfc2c5;
+        background: #b3b0ae9c;
       }
       .address-section-left {
         width: 49%;
@@ -93,7 +94,7 @@
       .sec-td-wrp {
         padding: 10px 20px;
         border-bottom: 1px solid #000;
-        background: #bfc2c5;
+        background: #b3b0ae9c;
       }
       .Project-Address {
         text-align: center;
@@ -109,7 +110,7 @@
         border-bottom: solid 1px #000;
       }
       .billing-desc-header {
-        background: #bfc2c5;
+        background: #b3b0ae9c;
         text-align: center;
         justify-content: center;
       }
@@ -120,7 +121,7 @@
       .purchase-desc {
         text-align: center;
         padding: 8px;
-        background: #bfc2c5;
+        background: #b3b0ae9c;
       }
       .purchase-desc-header {
         text-align: center;
@@ -149,6 +150,7 @@
       .footer tr {
         border: solid 1px #000;
         padding: 20px 5px;
+        font-family: "auto";
       }
       .message {
         text-align: start;
@@ -175,7 +177,7 @@
       }
       .footer-data {
         padding: 5px;
-        background: #bfc2c5;
+        background: #b3b0ae9c;
       }
     </style>
   </head>
@@ -191,7 +193,9 @@
         </div>
         <div>
           <strong style="font-size: 36px">Surface Center</strong> <br />
-          12800 Shawnee Mission Pkwy.<br />Shawnee, KS 66216
+          <div style="font-size: 26px">
+            12800 Shawnee Mission Pkwy.<br />Shawnee, KS 66216
+          </div>
         </div>
       </div>
 
@@ -200,7 +204,7 @@
           <strong>Invoice</strong>
         </div>
         <table class="invoice-info" style="width: 250px">
-          <tr style="background: #bfc2c5">
+          <tr style="background: #b3b0ae9c">
             <td>Date</td>
             <td>Invoice #</td>
           </tr>
@@ -240,7 +244,7 @@
         </div>
         <div class="Project-Address">
           <table class="Project-Address-table">
-            <tr style="background: #bfc2c5">
+            <tr style="background: #b3b0ae9c">
               <td>Project Address</td>
             </tr>
             <tr>
@@ -267,7 +271,7 @@
           <td>4-362</td>
           <td>Net 30</td>
           <td>2/15/2024</td>
-          <td style="color: #bfc2c5">COM</td>
+          <td style="color: grey">COM</td>
           <td>Ins KS COM RM**</td>
         </tr>
 
@@ -290,17 +294,22 @@
           <table class="footer">
             <tr>
               <th class="message">Thank you for your business</th>
-              <th style="width: 20%; text-align: left">Total</th>
+              <th style="width: 22%; text-align: left">Total</th>
               <td class="price">$12,962.49</td>
             </tr>
             <table class="footer-desc">
               <tr>
-                <td class="footer-data" style="width: 18%">Phone #</td>
-                <td class="footer-data" style="width: 25.8%">E-mail</td>
-                <td class="footer-data" style="width: 20.2%">Web Site</td>
+                <td class="footer-data" style="width: 19%">Phone #</td>
+                <td class="footer-data" style="width: 22.3%">E-mail</td>
+                <td class="footer-data" style="width: 19.7%">Web Site</td>
                 <td
                   class="footer-data"
-                  style="font-size: 12px; background-color: transparent"
+                  style="
+                    font-size: 12px;
+                    background-color: transparent;
+                    font-weight: bold;
+                    width: 20.7%;
+                  "
                 >
                   Down Payment/Credits
                 </td>
@@ -316,18 +325,10 @@
                 </td>
               </tr>
               <tr>
-                <td style="font-size:12px padding: 10px 0px;">913-422-0500</td>
-                <td style="font-size:12px  padding: 10px 0px;">
-                  rae.selvin@sci-surfaces.com
-                </td>
-                <td style="font-size:12px  padding: 10px 0px;">
-                  www.sci-surfaces.com
-                </td>
-                <th
-                  style="font-size: 25px; padding: 10px 0px; border-right: none"
-                >
-                  Balance Due
-                </th>
+                <td style="font-size: 12px">913-422-0500</td>
+                <td style="font-size: 12px">rae.selvin@sci-surfaces.com</td>
+                <td style="font-size: 12px">www.sci-surfaces.com</td>
+                <th style="font-size: 23px; border-right: none">Balance Due</th>
                 <td
                   style="
                     border-left: none;

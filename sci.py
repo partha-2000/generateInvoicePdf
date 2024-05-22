@@ -11,15 +11,16 @@ html_content = """
       body {
         font-family: Arial, sans-serif;
         margin: 40px;
-       
-        
+        box-shadow: none;
       }
-       .invoice-box {
+      .invoice-box {
         max-width: 900px;
         margin: auto;
+        /* padding: 30px; */
 
         font-size: 16px;
         line-height: 24px;
+        /* color: #555; */
       }
       .invoice-box table {
         width: 100%;
@@ -31,6 +32,7 @@ html_content = """
         padding: 10px;
         vertical-align: top;
         font-size: 14px;
+        line-height: 15px;
       }
       .invoice-box table tr td:nth-child(2) {
         text-align: right;
@@ -103,7 +105,7 @@ html_content = """
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       .top_left_txt_sec {
@@ -159,7 +161,7 @@ html_content = """
 
       .address-section-left {
         width: 49%;
-        margin: 20px;
+        margin: 20px 30px;
         display: flex;
         flex-direction: column;
       }
@@ -167,6 +169,7 @@ html_content = """
       .address-section {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 15px;
         /* grid-template-columns: auto auto; */
       }
 
@@ -176,17 +179,16 @@ html_content = """
         margin-bottom: 5px;
       }
       .third_sec_wrp {
-        width: 390px;
+        width: 426px;
         display: flex;
         justify-content: space-between;
       }
       .third_sec_info {
-        width: 30%;
+        margin-left: 5px;
       }
 
       .third_sec_info table {
         border-collapse: collapse;
-        border: 1px solid #000;
       }
       .third_sec_info table th,
       .third_sec_info table td {
@@ -195,6 +197,11 @@ html_content = """
         font-size: 12px;
         display: flex;
         justify-content: center;
+        border-top: none;
+      }
+      .third_sec_info table th {
+        border-top: solid 1px #000;
+        font-weight: normal;
       }
       /* .forth_sec{margin-bottom: 20px;} */
       .fifth_sec {
@@ -211,18 +218,25 @@ html_content = """
         border: 1px solid #000;
         font-weight: 600;
       }
+      .fifth_sec_right table td {
+        line-height: 24px;
+      }
       .fifth_sec_right table tr {
-        border-bottom: 2px solid #000;
+        border-bottom: 1px solid #000;
       }
       .fifth_sec_right table tr:last-child {
         border-bottom: none;
       }
       .fifth_sec_left p {
-        font-size: 15px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 18px;
         /* color: #555; */
-        margin: 4px;
+        margin: 4px 0px;
       }
+      .address-td{
+        padding: 3px !important;
+      }
+
     </style>
   </head>
   <body>
@@ -262,7 +276,7 @@ html_content = """
                   <td class="sec-td-wrp">Bill To:</td>
                 </tr>
                 <tr>
-                  <td style="padding-bottom: 30px">
+                  <td style="height: 140px;" class="address-td">
                     Mark Green<br />3821 W. 6th Street<br />Lawrence, KS 66049
                   </td>
                 </tr>
@@ -278,7 +292,7 @@ html_content = """
                   <td class="sec-td-wrp">Ship To:</td>
                 </tr>
                 <tr>
-                  <td style="padding-bottom: 30px">
+                  <td style="height: 140px" class="address-td">
                     Mark Green<br />3821 W. 6th Street<br />Lawrence, KS 66049
                   </td>
                 </tr>
@@ -302,7 +316,7 @@ html_content = """
 
       <div class="third_sec">
         <div class="third_sec_wrp">
-          <div class="third_sec_info">
+          <div class="third_sec_info" style="width: 35%">
             <table>
               <tbody>
                 <tr>
@@ -314,7 +328,7 @@ html_content = """
               </tbody>
             </table>
           </div>
-          <div class="third_sec_info">
+          <div class="third_sec_info" style="width: 35%">
             <table>
               <tbody>
                 <tr>
@@ -326,7 +340,7 @@ html_content = """
               </tbody>
             </table>
           </div>
-          <div class="third_sec_info">
+          <div class="third_sec_info" style="width: 25%">
             <table>
               <tbody>
                 <tr>
@@ -351,9 +365,9 @@ html_content = """
               <td>Amount</td>
             </tr>
             <tr class="item">
-              <td>CAB Install HD 410 - HD PO 10432977 Kate Herk</td>
+              <td style="width: 76%;padding: 3px;">CAB Install HD 410 - HD PO 10432977 Kate Herk</td>
               <td>1</td>
-              <td style="display: flex; justify-content: end">$1,469.00</td>
+              <td style="text-align: end">$1,469.00</td>
             </tr>
           </tbody>
         </table>
@@ -370,11 +384,11 @@ html_content = """
           </p>
         </div>
         <div class="fifth_sec_right">
-          <table>
+          <table style = 'border-top: none;'>
             <!-- <tr class="total_data"> -->
             <tbody>
               <tr>
-                <td>Total</td>
+                <td >Total</td>
                 <td>$1,469.00</td>
               </tr>
               <tr>
@@ -382,7 +396,7 @@ html_content = """
                 <td>-$1,469.00</td>
               </tr>
               <tr>
-                <td>Balance Due</td>
+                <td style = "font-size: 24px">Balance Due</td>
                 <td>$0.00</td>
               </tr>
             </tbody>
@@ -393,9 +407,11 @@ html_content = """
   </body>
 </html>
 
-
-
 """
-
+options = {
+     
+        'page-height': "11.7in",
+        'page-width': "8.3in"
+    }
 pdfkit.from_string(html_content, "output1.pdf")
 print("PDF generated successfully!")
