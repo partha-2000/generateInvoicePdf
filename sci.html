@@ -1,7 +1,3 @@
-import pdfkit
-
-
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,13 +17,12 @@ html_content = """
         display: flex;
         flex-direction: row;
         gap: 10px;
-          justify-content: center;
+        justify-content: center;
         align-items: center;
       }
       .header-left {
         text-align: center;
         justify-content: center;
-       
       }
       .header img {
         width: 115px;
@@ -153,15 +148,13 @@ html_content = """
       .footer th,
       .footer tr {
         border: solid 1px #000;
-        padding:20px 5px;
+        padding: 20px 5px;
       }
       .message {
-    
         text-align: start;
         font-style: italic;
         font-size: 25px;
         text-align: left;
-    
       }
       .price {
         text-align: end;
@@ -170,17 +163,17 @@ html_content = """
       .footer-desc th,
       .footer-desc tr {
         border: solid 1px #000;
-       
+
         /* border-collapse:collapse ; */
       }
-      .footer-desc  {
+      .footer-desc {
         border: solid 1px #000;
         padding: 20px;
-        border-collapse:collapse ;
+        border-collapse: collapse;
         width: 100%;
         text-align: center;
       }
-      .footer-data{
+      .footer-data {
         padding: 5px;
         background: #bfc2c5;
       }
@@ -190,9 +183,14 @@ html_content = """
     <!-- header section -->
     <div class="header">
       <div class="header-right">
-        <div><img src="https://simplicapital-live-bucket.s3.amazonaws.com/sci-surfaces/logo.jpeg" alt="logo"></div>
         <div>
-          <strong style="font-size: 36px;">Surface Center</strong> <br />
+          <img
+            src="https://simplicapital-live-bucket.s3.amazonaws.com/sci-surfaces/logo.jpeg"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <strong style="font-size: 36px">Surface Center</strong> <br />
           12800 Shawnee Mission Pkwy.<br />Shawnee, KS 66216
         </div>
       </div>
@@ -292,35 +290,53 @@ html_content = """
           <table class="footer">
             <tr>
               <th class="message">Thank you for your business</th>
-              <th style="width: 20%; text-align: left;">Total</th>
+              <th style="width: 20%; text-align: left">Total</th>
               <td class="price">$12,962.49</td>
             </tr>
             <table class="footer-desc">
-              <tr >
-                <td class="footer-data" style="width: 18%;">
-                  Phone #
-                </td>
-                <td  class="footer-data" style="width: 25.8%;">
-                  E-mail
-                </td>
-                <td  class="footer-data" style="width: 20.2%;">
-                  Web Site
-                </td>
-                <td  class="footer-data" style="font-size:12px; background-color:transparent;">
+              <tr>
+                <td class="footer-data" style="width: 18%">Phone #</td>
+                <td class="footer-data" style="width: 25.8%">E-mail</td>
+                <td class="footer-data" style="width: 20.2%">Web Site</td>
+                <td
+                  class="footer-data"
+                  style="font-size: 12px; background-color: transparent"
+                >
                   Down Payment/Credits
                 </td>
-                <td  class="footer-data" style="width: 15.9%; background-color:transparent; text-align: right;">
+                <td
+                  class="footer-data"
+                  style="
+                    width: 15.9%;
+                    background-color: transparent;
+                    text-align: right;
+                  "
+                >
                   $0.00
                 </td>
               </tr>
               <tr>
-                <td style="font-size:12px padding: 10px 0px;">
-                  913-422-0500
+                <td style="font-size:12px padding: 10px 0px;">913-422-0500</td>
+                <td style="font-size:12px  padding: 10px 0px;">
+                  rae.selvin@sci-surfaces.com
                 </td>
-                <td style="font-size:12px  padding: 10px 0px;">rae.selvin@sci-surfaces.com</td>
-                <td style="font-size:12px  padding: 10px 0px;">www.sci-surfaces.com</td>
-                <th style="font-size: 25px;     padding: 10px 0px;border-right: none;">Balance Due</th>
-                <td style="border-left: none;     padding: 10px 5px; text-align: right;">$1,198.00</td>
+                <td style="font-size:12px  padding: 10px 0px;">
+                  www.sci-surfaces.com
+                </td>
+                <th
+                  style="font-size: 25px; padding: 10px 0px; border-right: none"
+                >
+                  Balance Due
+                </th>
+                <td
+                  style="
+                    border-left: none;
+                    padding: 10px 5px;
+                    text-align: right;
+                  "
+                >
+                  $1,198.00
+                </td>
               </tr>
             </table>
           </table>
@@ -329,9 +345,3 @@ html_content = """
     </div>
   </body>
 </html>
-
-
-"""
-
-pdfkit.from_string(html_content, 'output1.pdf')
-print("PDF generated successfully!")
