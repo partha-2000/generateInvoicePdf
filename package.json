@@ -1,14 +1,18 @@
 {
-  "name": "genaratepdfinvoice",
+  "name": "generatePdf",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "serverless-python-requirements": "^6.1.0"
+  },
+  "keywords": [],
+  "description": "",
   "dependencies": {
-   
+    "serverless-offline-python": "^3.22.3"
   }
 }
